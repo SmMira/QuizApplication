@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="user" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="score : " />
+        <TextView
+            android:id="@+id/TvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="197dp"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/TvQuestionNumber"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/TVQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="here is the question" />
+
+        <EditText
+            android:id="@+id/ETResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="here is the response" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="103dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/ButtonValider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="validerReponse"
+            android:text="Valider"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Suivant"
+            android:onClick="questionSuivante"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fin"
+            android:onClick="SaveScore"/>
+    </LinearLayout>
+
+</RelativeLayout>
